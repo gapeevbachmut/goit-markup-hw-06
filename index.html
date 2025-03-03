@@ -20,11 +20,11 @@
 </head>
 
 <body>
-    <header class="header">
-        <!-- #region header -->
+
+    <header class="header-page">
         <div class="container container-header">
             <nav class="header-nav">
-                <a class="logo" href="">Web<span class="logo-color">Studio</span> </a>
+                <a class="logo" href="">Web<span class="logo-color">Studio</span></a>
                 <ul class="nav-list">
                     <li><a class="nav-link active" href="./index.html">Studio</a></li>
                     <li><a class="nav-link" href="">Portfolio</a></li>
@@ -32,21 +32,53 @@
                 </ul>
             </nav>
             <address class="address">
-                <ul class="address-item">
-                    <li>
-                        <a class="address-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                    </li>
-                    <li>
-                        <a class="address-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
-                    </li>
+                <ul class="address-list">
+                    <li><a class="address-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    <li><a class="address-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
                 </ul>
             </address>
+            <button class="burger-btn" type="button" data-menu-open>
+                <svg class="burger-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-burger"></use>
+                </svg>
+            </button>
         </div>
-        <!-- #endregion -->
+
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu-container">
+                <button class="mobile-menu-close" type="button" data-menu-close>
+                    <svg class="mobile-menu-close-icon" width="8" height="8">
+                        <use href="./images/icons.svg#icon-cross"></use>
+                    </svg>
+                </button>
+
+                <nav class="mobile-menu-nav"></nav>
+                <address class="mobile-menu-address"></address>
+                <ul class="mobile-s-list">
+                    <li class="mobile-s-item"><a class="mobile-s-link" href="#" aria-label="Instagram"><svg
+                                class="mobile-s-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg></a></li>
+                    <li class="mobile-s-item"><a class="mobile-s-link" href="#" aria-label="Twitter"><svg
+                                class="mobile-s-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg></a></li>
+                    <li class="mobile-s-item"><a class="mobile-s-link" href="#" aria-label="Facebook"><svg
+                                class="mobile-s-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg></a></li>
+                    <li class="mobile-s-item"><a class="mobile-s-link" href="#" aria-label="LinkedIn"><svg
+                                class="mobile-s-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg></a></li>
+                </ul>
+            </div>
+        </div>
     </header>
+
     <main>
         <!-- #region welcome -->
-        <section class="welcome-section">
+        <section class="welcome-section hidden">
             <div class="container welcome-container">
                 <h1 class="welcome">Effective Solutions for Your Business</h1>
                 <button class="button-wel" type="button" data-modal-open>
@@ -55,8 +87,8 @@
             </div>
         </section>
         <!-- #endregion -->
-        <!-- #region descriotion -->
-        <section class="section">
+        <!-- #region description -->
+        <section class="section hidden">
             <div class="container descr-container">
                 <h2 class="title visually-hidden">Description</h2>
                 <ul class="descr-list">
@@ -113,7 +145,7 @@
         </section>
         <!-- #endregion -->
         <!-- #region team -->
-        <section class="section team-section">
+        <section class="section team-section hidden">
             <div class="container team-container">
                 <h2 class="title">Our Team</h2>
                 <ul class="team-list">
@@ -267,7 +299,7 @@
         </section>
         <!-- #endregion -->
         <!-- #region portfolio -->
-        <section class="section portfolio-section">
+        <section class="section portfolio-section hidden">
             <div class="container portfolio-container">
                 <h2 class="title">Our Portfolio</h2>
                 <ul class="portfolio-list">
@@ -373,7 +405,7 @@
 
     <footer class="footer">
         <!-- #region footer -->
-        <div class="container container-footer">
+        <div class="container container-footer hidden">
             <div class="footer-description">
                 <a class="logo-footer" href="">Web<span class="logo-color-footer">Studio</span>
                 </a>
@@ -435,7 +467,7 @@
     </footer>
 
     <!-- #region modal window -->
-    <div class="modal-backdrop" data-modal>
+    <div class="modal-backdrop hidden" data-modal>
         <div class="modal-window">
             <button type="button" class="modal-btn-close" data-modal-close>
                 <svg class="modal-btn-icon" width="8" height="8">
@@ -499,7 +531,28 @@
         </div>
     </div>
 
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
+    <!-- #endregion -->
+    <picture class="hidden">
+        <source srcset="
+                        ./images/portfolio-img-desk.jpg    1x,
+                        ./images/portfolio-img-desk@2x.jpg 2x
+                      " media="(min-width: 1158px)" />
+        <source srcset="
+                        ./images/portfolio-img-tab.jpg    1x,
+                        ./images/portfolio-img-tab-@2x.jpg 2x
+                      " media="(min-width: 768px)" />
+        <source srcset="
+                        ./images/portfolio-img-mob.jpg    1x,
+                        ./images/portfolio-img-mob-@2x.jpg 2x
+                      " media="(max-width: 767px)" />
+        <img src="./images/portfolio-img-mob.jpg" alt="portfolio pictxure" />
+    </picture>
+
+
+
+
 </body>
 
 </html>
