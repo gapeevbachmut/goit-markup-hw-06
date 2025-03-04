@@ -22,6 +22,7 @@
 <body>
 
     <header class="header-page">
+        <!-- #region header -->
         <div class="container container-header">
             <nav class="header-nav">
                 <a class="logo" href="">Web<span class="logo-color">Studio</span></a>
@@ -74,11 +75,12 @@
                 </ul>
             </div>
         </div>
+        <!-- #endregion -->
     </header>
 
     <main>
         <!-- #region welcome -->
-        <section class="welcome-section hidden">
+        <section class="welcome-section ">
             <div class="container welcome-container">
                 <h1 class="welcome">Effective Solutions for Your Business</h1>
                 <button class="button-wel" type="button" data-modal-open>
@@ -88,7 +90,7 @@
         </section>
         <!-- #endregion -->
         <!-- #region description -->
-        <section class="section hidden">
+        <section class="section section-descr ">
             <div class="container descr-container">
                 <h2 class="title visually-hidden">Description</h2>
                 <ul class="descr-list">
@@ -112,8 +114,8 @@
                         </div>
                         <h3 class="descr-title">Punctuality</h3>
                         <p class="descr-text">
-                            Bring the key message to the brand's audience for the best price
-                            within the shortest possible time.
+                            Bring the key message to the brand's audience for the best price within the shortest
+                            possible time.
                         </p>
                     </li>
                     <li class="descr-item">
@@ -124,8 +126,9 @@
                         </div>
                         <h3 class="descr-title">Diligence</h3>
                         <p class="descr-text">
-                            Research and confirm brands with the strongest digital growth
-                            opportunities and minimize risk.
+                            Research and confirm brands that present the strongest digital growth opportunities and
+                            minimize risk.
+
                         </p>
                     </li>
                     <li class="descr-item">
@@ -145,13 +148,17 @@
         </section>
         <!-- #endregion -->
         <!-- #region team -->
-        <section class="section team-section hidden">
+        <section class="section team-section ">
             <div class="container team-container">
                 <h2 class="title">Our Team</h2>
                 <ul class="team-list">
                     <li class="team-photo">
-                        <img width="264" class="team-member" src="images/team/Mark_Guerrero.jpg" alt="Mark_Guerrero" />
-
+                        <picture>
+                            <source srcset="./images/team/Mark_Guerrero.jpg 1x, ./images/team/Mark_Guerrero-@2x.jpg 2x"
+                                media="(min-width: 1158px)">
+                            <img width="264" class="team-member" src="images/team/Mark_Guerrero.jpg"
+                                alt="Mark_Guerrero" />
+                        </picture>
                         <div class="team-photo-name">
                             <h3 class="team-name">Mark Guerrero</h3>
                             <p class="team-profession">Product Designer</p>
@@ -187,7 +194,11 @@
                         </div>
                     </li>
                     <li class="team-photo">
-                        <img width="264" class="team-member" src="images/team/Tom_Ford.jpg" alt="Tom_Ford" />
+                        <picture>
+                            <source srcset="./images/team/Tom_Ford.jpg 1x, ./images/team/Tom_Ford-@2x.jpg 2x"
+                                media="(min-width: 1158px)">
+                            <img width="264" class="team-member" src="images/team/Tom_Ford.jpg" alt="Tom_Ford" />
+                        </picture>
                         <div class="team-photo-name">
                             <h3 class="team-name">Tom Ford</h3>
                             <p class="team-profession">Frontend Developer</p>
@@ -223,7 +234,12 @@
                         </div>
                     </li>
                     <li class="team-photo">
-                        <img width="264" class="team-member" src="images/team/Camila_Garcia.jpg" alt="Camila_Garcia" />
+                        <picture>
+                            <source srcset="./images/team/Camila_Garcia.jpg 1x, ./images/team/Camila_Garcia-@2x.jpg 2x"
+                                media="(min-width: 1158px)">
+                            <img width="264" class="team-member" src="images/team/Camila_Garcia.jpg"
+                                alt="Camila_Garcia" />
+                        </picture>
                         <div class="team-photo-name">
                             <h3 class="team-name">Camila Garcia</h3>
                             <p class="team-profession">Marketing</p>
@@ -259,7 +275,12 @@
                         </div>
                     </li>
                     <li class="team-photo">
-                        <img width="264" class="team-member" src="images/team/Daniel_Wilson.jpg" alt="Daniel_Wilson" />
+                        <picture>
+                            <source srcset="./images/team/Daniel_Wilson.jpg 1x, ./images/team/Daniel_Wilson-@2x.jpg 2x"
+                                media="(min-width: 1158px)">
+                            <img width="264" class="team-member" src="images/team/Daniel_Wilson.jpg"
+                                alt="Daniel_Wilson" />
+                        </picture>
                         <div class="team-photo-name">
                             <h3 class="team-name">Daniel Wilson</h3>
                             <p class="team-profession">UI Designer</p>
@@ -467,7 +488,7 @@
     </footer>
 
     <!-- #region modal window -->
-    <div class="modal-backdrop hidden" data-modal>
+    <div class="modal-backdrop " data-modal>
         <div class="modal-window">
             <button type="button" class="modal-btn-close" data-modal-close>
                 <svg class="modal-btn-icon" width="8" height="8">
@@ -534,23 +555,6 @@
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
     <!-- #endregion -->
-    <picture class="hidden">
-        <source srcset="
-                        ./images/portfolio-img-desk.jpg    1x,
-                        ./images/portfolio-img-desk@2x.jpg 2x
-                      " media="(min-width: 1158px)" />
-        <source srcset="
-                        ./images/portfolio-img-tab.jpg    1x,
-                        ./images/portfolio-img-tab-@2x.jpg 2x
-                      " media="(min-width: 768px)" />
-        <source srcset="
-                        ./images/portfolio-img-mob.jpg    1x,
-                        ./images/portfolio-img-mob-@2x.jpg 2x
-                      " media="(max-width: 767px)" />
-        <img src="./images/portfolio-img-mob.jpg" alt="portfolio pictxure" />
-    </picture>
-
-
 
 
 </body>
