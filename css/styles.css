@@ -423,7 +423,6 @@ button {
     min-height: 432px;
     padding: 72px 0;
     margin: 0 auto;
-    margin-bottom: 96px;
 }
 
 .welcome-container {
@@ -653,6 +652,8 @@ button {
 }
 
 .modal-checkbox-text {
+    display: flex;
+    align-items: center;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -666,6 +667,7 @@ button {
     border: 1px solid rgba(46, 47, 66, 0.4);
     width: 16px;
     height: 16px;
+    margin-right: 8px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -674,6 +676,10 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-checkbox-border-text {
+    max-width: 232px;
 }
 
 .modal-checkbox-icon {
@@ -748,7 +754,8 @@ button {
 /* #region descriotion mobile */
 
 .section-descr {
-    margin-bottom: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .descr-item-icon {
@@ -797,6 +804,11 @@ button {
 }
 
 @media screen and (min-width: 1158px) {
+    .section-descr {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
     .descr-list {
         gap: 24px;
     }
@@ -837,13 +849,14 @@ button {
 
 .team-section {
     background: #f4f4fd;
-    margin-bottom: 96px;
-}
-
-.team-container {
     padding-top: 96px;
     padding-bottom: 96px;
 }
+
+/* .team-container {
+    padding-top: 96px;
+    padding-bottom: 96px;
+} */
 
 .team-list {
     display: flex;
@@ -934,7 +947,7 @@ button {
 }
 
 @media screen and (min-width: 1158px) {
-    .team-container {
+    .team-section {
         padding-top: 120px;
         padding-bottom: 120px;
     }
@@ -956,7 +969,8 @@ button {
 }
 
 .portfolio-section {
-    margin-bottom: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .portfolio-list {
@@ -1009,7 +1023,8 @@ button {
 
 @media screen and (min-width: 1158px) {
     .portfolio-section {
-        margin-bottom: 120px;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 
     .portfolio-list {
@@ -1216,12 +1231,20 @@ button {
         padding-left: 108px;
     }
 
+    .logo-footer {
+        align-self: flex-start;
+    }
+
     .footer-description {
         margin-right: 24px;
     }
 
     .footer-text {
         max-width: 264px;
+    }
+
+    .footer-social-text {
+        text-align: start;
     }
 
     .footer-subscription {
