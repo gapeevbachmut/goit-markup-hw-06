@@ -340,6 +340,10 @@ button {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.mobile-menu-nav .nav-link.active {
+    color: #404bbf;
+}
+
 .mobile-menu-nav .nav-link:focus {
     color: #404bbf;
 }
@@ -354,6 +358,10 @@ button {
     gap: 24px;
 }
 
+.mobile-menu-address .address-list li:nth-child(2) {
+    order: -1;
+}
+
 .mobile-menu-address .address-link {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -363,6 +371,10 @@ button {
     letter-spacing: 0.02em;
     color: #434455;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-address .address-link.active {
+    color: #4d5ae5;
 }
 
 .mobile-menu-address .address-link:focus {
@@ -409,18 +421,16 @@ button {
 /* #endregion */
 /* #region welcome mobile */
 
-/* можливо ??? краще фото не в секцію а в контейнер?!!!!!!!!! */
-
 .welcome-section {
     background-color: #2e2f42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
-        url(../images/welcome/people-office-mobile.jpg);
+        image-set(url(../images/welcome/people-office-mobile.jpg) 1x,
+            url(../images/welcome/people-office-mobile-@2x.jpg) 2x);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 320px;
-    min-height: 432px;
     padding: 72px 0;
     margin: 0 auto;
 }
@@ -456,7 +466,6 @@ button {
     min-width: 169px;
     height: 56px;
     border: none;
-
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -473,7 +482,8 @@ button {
         padding: 112px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/welcome/people-office.jpg);
+            image-set(url(../images/welcome/people-office.jpg) 1x,
+                url(../images/welcome/people-office-@2x.jpg) 2x);
     }
 
     .welcome {
@@ -489,11 +499,12 @@ button {
 
 @media screen and (min-width: 1158px) {
     .welcome-section {
-        max-width: 1158px;
+        max-width: 1440px;
         padding: 188px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url(../images/welcome/people-office-@2x.jpg);
+            image-set(url(../images/welcome/people-office-pc.jpg) 1x,
+                url(../images/welcome/people-office-pc-@2x.jpg) 2x);
     }
 
     .welcome {
@@ -857,11 +868,6 @@ button {
     padding-bottom: 96px;
 }
 
-/* .team-container {
-    padding-top: 96px;
-    padding-bottom: 96px;
-} */
-
 .team-list {
     display: flex;
     justify-content: center;
@@ -1021,7 +1027,7 @@ button {
     }
 
     .portfolio-item {
-        flex-basis: calc((100% - 72px) / 2);
+        flex-basis: calc((100% - 24px) / 2);
     }
 }
 
@@ -1076,8 +1082,6 @@ button {
 
 /* #endregion  */
 /* #region footer mobile */
-
-/*  background-color краще для самого футера або для контейнера */
 
 .footer {
     background-color: #2e2f42;
@@ -1232,7 +1236,7 @@ button {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: baseline;
-        padding-left: 108px;
+        max-width: 584px;
     }
 
     .logo-footer {
@@ -1286,6 +1290,10 @@ button {
 @media screen and (min-width: 1158px) {
     .footer {
         padding: 100px 0;
+    }
+
+    .container-footer {
+        max-width: 1158px;
     }
 
     .footer-description {
