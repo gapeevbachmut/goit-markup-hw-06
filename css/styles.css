@@ -853,9 +853,7 @@ button {
     .descr-text {
         font-weight: 400;
         min-width: 264px;
-        letter-spacing: 0;
-        /* у розділі Diligence текст не влізає у розмір - 
-        слово growth випадає. змінив letter-spacing: 0,02em; */
+        letter-spacing: 0.02em;
     }
 }
 
