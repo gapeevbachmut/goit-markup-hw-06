@@ -810,7 +810,7 @@ button {
     }
 
     .descr-item {
-        flex-basis: calc((100% - 72px) / 2);
+        flex-basis: calc((100% - 24px) / 2);
     }
 
     .descr-text {
